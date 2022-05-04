@@ -1,7 +1,5 @@
 n=int(input())
-for i in range(1,n+1):
-    for j in range(1,(n+1)-2):
-        print('%d'%j,end='')   
-    for j in range(1,n-2):
-        print('%d'%j,end='')
+for i in range(65,n+65):
+    for j in range(65,n+65):
+        print('%c'%i,end=' ')
     print()
