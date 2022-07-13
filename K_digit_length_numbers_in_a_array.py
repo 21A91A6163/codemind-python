@@ -1,9 +1,9 @@
-a,b=map(int,input().split())
+x,y=map(int,input().split())
 l=list(map(int,input().split()))
-x=0
-for i in l:
-    i=abs(i)
-    i=str(i)
-    if len(i)==b:
-        x+=1
-print(x)
+c=0
+for i in range(len(l)):
+    l[i]=abs(l[i])
+    l[i]=str(l[i])
+    if len(l[i])==y:
+        c+=1
+print(c)
