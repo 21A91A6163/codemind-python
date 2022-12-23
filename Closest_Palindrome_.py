@@ -1,28 +1,30 @@
-import math
-x=int(input())
-k=0
+n=int(input())
+rev=0
 s=0
-for i in range(x+1,10000):
-    t=i
-    k=0
-    while i:
+q=0
+for i in range(n+1,2*n):
+    k=i
+    rev=0
+    while(i!=0):
         d=i%10
         i=i//10
-        k=k*10+d
-    if(k==t):
+        rev=rev*10+d
+    if k==rev:
+        s=k
         break
-for i in range(x-1,1,-1):
-    z=i
-    s=0
-    while i:
+for i in range(n-1,-1,-1):
+    k=i
+    rev=0
+    while(i!=0):
         d=i%10
         i=i//10
-        s=s*10+d
-    if(s==z):
+        rev=rev*10+d
+    if k==rev:
+        q=k
         break
-if(abs(x-s)==abs(k-x)):
-    print(s,k)
-elif(abs(x-s)<abs(k-x)):
+if abs(n-s)<abs(n-q):
     print(s)
+elif abs(n-q)<abs(n-s):
+    print(q)
 else:
-    print(k)
+    print(q,s,end=' ')
